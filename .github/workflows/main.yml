@@ -1,0 +1,131 @@
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+
+        val etAge = findViewById<EditText>(R.id.etAge).text
+
+        val btnGenerateHistory = findViewById<Button>(R.id.btnGenerateHistory)
+        val btnClear = findViewById<Button>(R.id.btnClear)
+
+        val tvResult = findViewById<TextView>(R.id.tvResult)
+
+        btnClear.setOnClickListener{
+            etAge.clear()
+        }
+
+        btnGenerateHistory.setOnClickListener {
+
+            var HistoryPerson: String = ""
+            val age = etAge.toString().toIntOrNull()
+            var HistoryPersonInfo: String = ""
+
+
+            if (age in 20..100)
+            {
+                when (age) {
+                    //All the names of people in the application
+                    20 -> HistoryPerson = "Stratten Dorothy died.Stratten Dorothy was an Canadian model and actress,primairly known for her appearances as a Playboy Playmate."
+                    21 -> HistoryPerson = "Hampton  Fred died.Hampton  Fred was an American activist."
+                    22 -> HistoryPerson = "Wadloww Robert died.Wadloww Robert was an aAmerican man who was the tallest person in recorded history."
+                    23 -> HistoryPerson = "Phoenix River died.Phoenix River was a talented and charismatic actor who rose to fame in the 1980s with films like Standby Me and Running on Empty."
+                    24 -> HistoryPerson = "Levy Chandra died.Levy Chandra was an American intern at the Federal Bureau of Prisons in Washington,Dc."
+                    25 -> HistoryPerson = "Owen Wilfred died.Owen Wilfred was an English poet and Soldier git."
+                    26 -> HistoryPerson = "Taylor Breonna died."
+                    27 -> HistoryPerson = "Hernandez Aaron died.Hernandez Aaron was American professional football player who was a tight end."
+                    28 -> HistoryPerson = "Adams George washington died.Adams George washington was an American attorney and politican."
+                    29 -> HistoryPerson = "Williams Hank died.Williams Hank was an American singer-songwritter."
+                    30 -> HistoryPerson = "Bronte Emily died.Bronte Emily was English novelist and poet who is best known for her only novel,Wuthering Heights,now considered a classic of English literature."
+                    31 -> HistoryPerson = "Turner Nat died.Turner Nat was an enslaved African-American preacher."
+                    32 -> HistoryPerson = "Kenny Douglas died.Kenny Diuglas was an American comedy writer of magazine,novels,radio,TV and film."
+                    33 -> HistoryPerson = "Lombard Carole died.Lombard Carole was an American actress."
+                    34 -> HistoryPerson = "Smith Elliott died.Smith Elliott was an American musician and singer-songwriter."
+                    35 -> HistoryPerson = "Mozart Wolfgang Amadeus died.Mozart Wolfgang Amadeus was a musical prodigy who composed over 600 works in his short life of 35 years. "
+                    36 -> HistoryPerson = "Bob Marley died.Bob Marley was a Jamaican reggae singer,guitarist and songwriter."
+                    37 -> HistoryPerson = "Marie Antoinette died.Marie Antoinette was the last queen of France prior to the Grench Revolution."
+                    38 -> HistoryPerson = "Louis XVI died.Louis XVI was the last king of France before the fall of the monarchy during the French Revolution."
+                    39 -> HistoryPerson = "Malcolm X died.Malcolm X was an American Muslim minister and human rights activist who was a prominent figure during the civil rights movement."
+                    40 -> HistoryPerson = "Paul Walker died.Paul Walker was an American actor who is futured in the movie series fast and furious."
+                    41 -> HistoryPerson = "Jeff Healey died.Jeff Healey was a Canadian blues, rock and jazz singer, guitarist, and songwriter who attained popularity in the 1980s and 1990s."
+                    42 -> HistoryPerson = "Kimbo Slice died.Kimbo Slice was a Bahamian mixed martial artist, professional boxer, and actor."
+                    43 -> HistoryPerson = "Louid Braille died.Louid Braille was a French educator and the inventor of a reading and writing system named after him, braille, intended for use by visually impaired people."
+                    44 -> HistoryPerson = "Pablo Escobar died.Pablo Escobar was a Colombian drug lord, narcoterrorist, and politician, who was the founder and sole leader of the Medellín Cartel. Dubbed \"the king of cocaine\", Escobar was one of the wealthiest criminals in history,"
+                    45 -> HistoryPerson = "Natasha Richardson died.Natasha Richardson was an English actress. "
+                    46 -> HistoryPerson = "Andre the Giant died.Andre the Giant was a French professional wrestler and actor."
+                    47 -> HistoryPerson = "Ernest Shackleton died.Ernest Shackleton was an Anglo-Irish Antarctic explorer who led three British expeditions to the Antarctic."
+                    48 -> HistoryPerson = "Whitney Houston died.Whitney Houston was an American singer, record producer, actress, film producer, and philanthropist."
+                    49 -> HistoryPerson = "Keith Flint died.Keith Flint  was an English singer and a vocalist of the electronic dance act the Prodigy."
+                    50 -> HistoryPerson = "Michael Jackson died.Michael Jackson was an American singer, songwriter, dancer, and philanthropist. "
+                    51 -> HistoryPerson = "Edouard Manet died.Edouard Manet was a French modernist painter."
+                    52 -> HistoryPerson = "William Shakespeare died.William Shakespeare was an English playwright, poet and actor."
+                    53 -> HistoryPerson = "George Michael died.George Michael was an English singer-songwriter, record producer and philanthropist."
+                    54 -> HistoryPerson = "John RItter died.John RItter was an American actor."
+                    55 -> HistoryPerson = "Kate Spade died.Kate Spade was an American fashion designer and entrepreneur."
+                    56 -> HistoryPerson = "Steve Jobs died.Steve Jobs  was an American businessman, inventor, and investor best known for co-founding the technology giant Apple Inc."
+                    57 -> HistoryPerson = "Vince Lombardi died.Vince Lombardi was an American football coach and executive in the National Football League (NFL)."
+                    58 -> HistoryPerson = "Charles Dickens died.Charles Dickens was an English novelist and social critic who created some of the world's best-known fictional characters, and is regarded by many as the greatest novelist of the Victorian era."
+                    59 -> HistoryPerson = "William the Conqueror died.William the Conqueror was the first Norman king of England (as William I), reigning from 1066 until his death."
+                    60 -> HistoryPerson = "Benedict Arnlod died.Benedict Arnlod  was a British military officer who served during the American Revolutionary War."
+                    61 -> HistoryPerson = "John Gotti died.John Gotti  was an American mafioso and boss of the Gambino crime family in New York City."
+                    62 -> HistoryPerson = "Farrah Fawcett died.Farrah Fawcett  was an American actress."
+                    63 -> HistoryPerson = "Robin Williams died.Robin Williams was an American actor and comedian."
+                    64 -> HistoryPerson = "Malcolm Young died.was an Australian musician who was the co-founder, rhythm guitarist, backing vocalist and songwriter of the hard rock band AC/DC."
+                    65 -> HistoryPerson = "Walt Disney died.Walt Disney was an American animator, film producer, and entrepreneur. A pioneer of the American animation industry, he introduced several developments in the production of cartoons."
+                    66 -> HistoryPerson = "Tom Clancy died.Tom Clancy was an American novelist. He is best known for his technically detailed espionage and military-science storylines set during and after the Cold War."
+                    67 -> HistoryPerson = "Josef Mengele died.Josef Mengele was a German Schutzstaffel (SS) officer and physician during World War II."
+                    68 -> HistoryPerson = "Johan Cruffy died.Johan Cruffy was a Dutch professional football player and manager."
+                    69 -> HistoryPerson = "David Bowie died.David Bowie was an English singer, songwriter, musician, and actor."
+                    70 -> HistoryPerson = "Louis Vuttion died.Louis Vuttion is the founder of the famous and world know luxery brand LVgit "
+                    71 -> HistoryPerson = "Bill Robinson died.Bill Robinson was an American tap dancer, actor, and singer, the best known and the most highly paid Black entertainer in the United States during the first half of the 20th century."
+                    72 -> HistoryPerson = "John Wayne died.John Wayne  was an American actor who became a popular icon through his starring roles in films which were produced during Hollywood's Golden Age, especially in Western and war movies."
+                    73 -> HistoryPerson = "James Brown died.James Brown was an American singer, dancer and musician."
+                    74 -> HistoryPerson = "Alan Shepard died.Alan Shepard was an American astronaut."
+                    75 -> HistoryPerson = "J.P.Morgan died.J.P.Morgan was an American financier and investment banker who dominated corporate finance on Wall Street throughout the Gilded Age and Progressive Era."
+                    76 -> HistoryPerson = "Danny Kaye died.Danny Kaye was an American actor, comedian, singer, and dancer."
+                    77 -> HistoryPerson = "Galileo Galilei died.Galileo Galilei was an Italian astronomer, physicist and engineer, sometimes described as a polymath."
+                    78 -> HistoryPerson = "Robert Forster died.Robert Forster  was an American actor, known for his roles as John Cassellis in Medium Cool (1969), Captain Dan Holland in The Black Hole (1979), Abdul Rafai in The Delta Force (1986), and Max Cherry in Jackie Brown (1997), for which he was nominated for the Academy Award for Best Supporting Actor."
+                    79 -> HistoryPerson = "Charles de Gaulle died.Charles de Gaulle was a French army officer and statesman who led the Free French Forces against Nazi Germany in World War II and chaired the Provisional Government of the French Republic from 1944 to 1946 to restore democracy in France."
+                    80 -> HistoryPerson = "Marlon Brando died.Marlon Brando was an American actor and activist."
+                    81 -> HistoryPerson = "Queen Victoria died.Queen Victoria was Queen of the United Kingdom of Great Britain and Ireland from 20 June 1837 until her death in 1901."
+                    82 -> HistoryPerson = "Burt Reynolds died.Burt Reynolds was an American actor, considered a sex symbol and icon of 1970s American popular culture."
+                    83 -> HistoryPerson = "Tina Turner died.Tina Turner was a singer, songwriter, and actress."
+                    84 -> HistoryPerson = "Issac Newton died.Issac Newton was an English polymath active as a mathematician, physicist, astronomer, alchemist, theologian, and author who was described in his time as a natural philosopher."
+                    85 -> HistoryPerson = "Agatha Christie died.Agatha Christie was an English writer known for her 66 detective novels and 14 short story collections, particularly those revolving around fictional detectives Hercule Poirot and Miss Marple."
+                    86 -> HistoryPerson = "Antony Armstrong-Jones died.Antony Armstrong-Jones  was a British photographer and filmmaker."
+                    87 -> HistoryPerson = "Mother Tersa died.Mother Tersa  was an Albanian-Indian Catholic nun and the founder of the Missionaries of Charity."
+                    88 -> HistoryPerson = "Charlie Chaplin died died.Charlie Chaplin was an English comic actor, filmmaker, and composer who rose to fame in the era of silent film."
+                    89 -> HistoryPerson = "Roger Moore died.Roger Moore was an English actor. He was the third actor to portray fictional secret agent James Bond in the Eon Productions/MGM Studios film series, playing the character in seven feature films between 1973 and 1985."
+                    90 -> HistoryPerson = "Winston Churchill died.Winston Churchill was a British statesman, soldier, and writer who twice served as Prime Minister of the United Kingdom, from 1940 to 1945 during the Second World War, and again from 1951 to 1955."
+                    91 -> HistoryPerson = "Frank Lloyd died.Frank Lloyd was a British-born American film director, actor, scriptwriter, and producer."
+                    92 -> HistoryPerson = "Harold Macmillana died.Harold Macmillana was a British statesman and Conservative politician who was Prime Minister of the United Kingdom from 1957 to 1963."
+                    93 -> HistoryPerson = "Linus Pauling died.Linus Pauling  was an American chemist, biochemist, chemical engineer, peace activist, author, and educator."
+                    94 -> HistoryPerson = "George Bernard died.George Bernard was an Irish playwright, critic, polemicist and political activist."
+                    95 -> HistoryPerson = "Nelson Mandela died.Nelson Mandela  was a South African anti-apartheid activist, politician, and statesman who served as the first president of South Africa from 1994 to 1999."
+                    96 -> HistoryPerson = "Joan Fontaine died.Joan Fontaine Joan was an English-American actress who is best known for her starring roles in Hollywood films during the Golden Age of Hollywood."
+                    97 -> HistoryPerson = "Nsnette Fabray died.Nsnette Fabray was an American actress, singer and dancer."
+                    98 -> HistoryPerson = "Bob Dole died.Bob Dole was an American politician and attorney who represented Kansas in the United States Senate from 1969 to 1996."
+                    99 -> HistoryPerson = "Michael Debakey died.Michael Debakey was an American general and cardiovascular surgeon, scientist and medical educator who became Chairman of the Department of Surgery, President, and Chancellor of Baylor College of Medicine at the Texas Medical Center in Houston, Texas. "
+                    100 -> HistoryPerson = "Strom Thurmond died.Strom Thurmond was an American politician who represented South Carolina in the United States Senate from 1954 to 2003."
+
+
+                }
+                tvResult.text = "Your are ${etAge} which is the same age as when ${HistoryPerson}"
+                //What the app will display is user enters any age above 100 and below 20
+            } else {tvResult.text = "Please re-enter any number between 20-100"}
+            }
+
+
+
+
+        }
+   }
